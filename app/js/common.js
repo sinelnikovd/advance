@@ -5,18 +5,34 @@ $(document).ready(function() {
 	}
 
 
-	/*var carouselCustomer = $('.carousel-customer__items').owlCarousel({
+	var carouselTop = $('.top-slider').owlCarousel({
 		loop: true,
 		nav: false,
 		items: 1
-	})
-	$('.carousel-customer__prev').click(function() {
-		carouselCustomer.trigger('prev.owl.carousel');
-	})
-	$('.carousel-customer__next').click(function() {
-		carouselCustomer.trigger('next.owl.carousel');
-	})*/
+	});
+	$('.top-slider__nav_prev').click(function() {
+		carouselTop.trigger('prev.owl.carousel');
+	});
+	$('.top-slider__nav_next').click(function() {
+		carouselTop.trigger('next.owl.carousel');
+	});
 
+	var carouselPerson = $('.silder-person').owlCarousel({
+		loop: true,
+		nav: false,
+		items: 3
+	});
+	$('.silder-person__nav_prev').click(function() {
+		$(this).closest('.silder-person-wrap').find('.silder-person').trigger('prev.owl.carousel');
+	});
+	$('.silder-person__nav_next').click(function() {
+		$(this).closest('.silder-person-wrap').find('.silder-person').trigger('next.owl.carousel');
+	});
+
+	$('.program-nav__item').click(function() {
+		$('.occupation.active').removeClass('active');
+		$('.occupation').eq($(this).index()).addClass('active');
+	});
 
 });
 

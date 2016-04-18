@@ -9,21 +9,24 @@
 
 
 *::-webkit-input-placeholder
-	color: #424242
+	color: #dbdbdb
 	opacity: 1
 
 
 *:-moz-placeholder
-	color: #424242
+	color: #dbdbdb
 	opacity: 1
 
 *::-moz-placeholder
-	color: #424242
+	color: #dbdbdb
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #424242
+	color: #dbdbdb
 	opacity: 1
+
+*
+	outline: none
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
@@ -35,24 +38,589 @@ body textarea:required:valid
 
 body
 	font-size: 17px
-	min-width: 1200px
+	min-width: 1350px
 	position: relative
 	line-height: 1.3
-	font-family: "HelveticaNeueLight", $helvetica
+	font-family: "MyriadProRegular", $helvetica
 	font-weight: normal
 	overflow-x: hidden
-	color: #000
+	color: #4b4b4b
 	position: relative
+
+img
+	max-width: 100%
+
+.container
+	max-width: 1350px
+	padding: 0 15px
+	margin: 0 auto
 
 
 /* icon */
 .icon
 	display: inline-block
-/*.icon_project
-	+sprite($s-project)*/
+.icon_point
+	+sprite($s-point)
+.icon_ca1
+	+sprite($s-ca1)
+.icon_prev
+	+sprite($s-prev)
+.icon_next
+	+sprite($s-next)
 /* end icon */
 
+// BEGIN TEXT 
+%f-got
+	font-family: "CenturyGothicRegular", $helvetica
+%f-got-b
+	font-family: "CenturyGothicBold", $helvetica
+%f-mp-b
+	font-family: "MyriadProBold", $helvetica
 
+.bold
+	@extend %f-got-b
+
+.arial
+	font-family: Arial, $helvetica
+
+.h2
+	@extend %f-got
+	font-size: 60px
+	line-height: 70px
+	color: $c-red
+	text-align: center
+	text-transform: uppercase
+
+.description
+	@extend %f-got
+	font-size: 30px
+	text-align: center
+	padding: 0 10%
+.description_nop
+	padding: 0
+// END TEXT 
+
+
+
+
+
+// BEGIN FORM 
+.btn-wrapper
+	text-align: center
+.btn
+	text-decoration: none
+	cursor: pointer
+	height: 73px
+	display: inline-block
+	box-sizing: border-box
+	text-transform: uppercase
+.btn_red
+	background-color: $c-red
+	color: #fff
+	font-size: 28px
+	line-height: 70px
+	border-top: 2px solid #fff
+	border-left: 2px solid #fff
+	border-bottom: 2px solid #fff
+	padding: 0 25px 0 40px
+	position: relative
+	&:after
+		content: ''
+		background-image: url(img/btn-right.png)
+		background-repeat: no-repeat
+		+size(15px 73px)
+		position: absolute
+		top: -2px
+		left: 100%
+.input
+	border: 0
+	font-size: 30px
+	height: 100%
+	width: 100%
+	padding: 0 15px
+	box-sizing: border-box
+
+.input-wrapper
+	background-color: #fff
+	height: 74px
+	position: relative
+	&:after
+		content: ''
+		background-image: url(img/input.png)
+		background-repeat: no-repeat
+		+size(14px 74px)
+		position: absolute
+		top: -1px
+		left: 100%
+// END FORM 
+
+
+
+// BEGIN GRID 
+.row
+	+clearfix
+.col-4
+	float: left
+	width: 33.33333%
+.col-4-m
+	margin-left: 33.3333333%
+.col-3
+	float: left
+	width: 25%
+.col-6
+	float: left
+	width: 50%
+.col-8
+	float: left
+	width: ((1320/12)*8)/1320 *100%
+.col-9
+	float: left
+	width: ((1320/12)*9)/1320 *100%
+// END GRID 
+
+// BEGIN HEADER 
+.header
+	position: relative
+// END HEADER 
+
+// BEGIN LOGO 
+.logo
+	position: absolute
+	top: 35px
+	left: 15px
+	&:after
+		content: ''
+		position: absolute
+		top: 20px
+		left: 58px
+		z-index: 1
+		+size(0)
+		border-left: 50px solid transparent
+		border-right: 50px solid transparent
+		border-top: 100px solid $c-red
+.logo__link
+	display: block
+	position: relative
+	z-index: 2
+// END LOGO 
+
+// BEGIN TOP-LINE 
+.top-line
+	background-color: $c-red
+	height: 120px
+	position: relative
+	z-index: 5
+	.container
+		position: relative
+// END TOP-LINE 
+
+// BEGIN TOP-SLIDER 
+.top-slider-wrap
+	position: relative
+.top-slider__nav
+	position: absolute
+	top: 50%
+	z-index: 20
+	cursor: pointer
+.top-slider__nav_prev
+	left: 10px
+.top-slider__nav_next
+	right: 10px
+.top-slide
+	padding: 360px 0 160px
+	background-image: url(img/top-slide.jpg)
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	background-size: cover
+.top-slide__title
+	@extend %f-got
+	font-size: 58px
+	text-transform: uppercase
+	color: #fff
+	text-align: center
+.top-slide__text
+	margin-top: 35px
+	@extend %f-mp-b
+	font-size: 32px
+	color: #000
+	padding: 0 4%
+// END TOP-SLIDER 
+
+
+// BEGIN HEADER__MORE 
+.header__more
+	position: absolute
+	z-index: 5
+	bottom: 0
+	left: 0
+	right: 0
+	text-align: center
+	padding-bottom: 45px
+.start-group
+	font-size: 32px
+	text-align: left
+// END HEADER__MORE 
+
+
+
+// BEGIN WHATFOR 
+.whatfor
+	padding: 50px 0 90px
+	background-image: url(img/whatfor.jpg)
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	background-size: cover
+	border-top: 5px solid #fff
+	box-sizing: border-box
+.whatfor__list
+	padding: 40px 0 0 80px
+	box-sizing: border-box
+	+clearfix
+.whatfor__item
+	float: left
+	width: 50%
+	padding: 20px 35px
+	font-size: 32px
+	box-sizing: border-box
+	position: relative
+	&:nth-child(2n)
+		+clearfix
+.whatfor__icon
+	position: absolute
+	top: 30px
+	left: -15px
+// END WHATFOR 
+
+
+// BEGIN CAPABILITIES 
+.capabilities
+	padding: 25px 0 0
+	.h2
+		margin-bottom: 50px
+.capabilities__item
+	margin: 20px 0
+	padding: 0 10px
+	box-sizing: border-box
+	+clearfix
+.capabilities__icon
+	float: left
+	width: 30%
+	text-align: center
+.capabilities__text
+	float: left
+	width: 70%
+	font-size: 25px
+// END CAPABILITIES 
+
+// BEGIN RECALL 
+.recall__desc
+	padding-left: 20px
+.recall__text
+	margin-top: 50px
+	font-size: 30px
+.recall__name
+	margin-top: 20px
+	@extend %f-mp-b
+	font-size: 30px
+.recall__position
+	font-size: 20px
+.recall__img
+	vertical-align: bottom
+// END RECALL 
+
+// BEGIN SIGNUP 
+.signup
+	padding: 60px 0
+	background-image: url(img/signup.jpg)
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	background-size: cover
+.signup__text
+	margin: 20px 0
+	padding: 0 15%
+	font-size: 32px
+.signup__text_bold
+	@extend %f-mp-b
+
+.signup-form
+	margin: 30px 5% 0
+	padding: 30px 50px
+	background-color: rgba(232,131,134,.5)
+	box-sizing: border-box
+.signup-form__text
+	font-size: 32px
+	color: #9a6769
+.signup-form__line
+	margin-top: 20px
+	+clearfix
+.signup-form__control
+	float: left
+	width: 33.33333%
+	padding: 0 20px
+	box-sizing: border-box
+// END SIGNUP 
+
+
+// BEGIN EXPERIENCE 
+.experience
+	padding: 40px 0 60px
+.silder-person-wrap
+	position: relative
+.silder-person__nav
+	position: absolute
+	top: 50%
+	z-index: 20
+	cursor: pointer
+.silder-person__nav_prev
+	right: 100%
+.silder-person__nav_next
+	left: 100%
+.silder-person
+	margin-top: 30px
+.silder-person-item
+	padding: 0 20px
+	background-color: #fff
+.silder-person-item__name
+	margin-top: 20px
+	@extend %f-got-b
+	text-transform: uppercase
+	font-size: 32px
+	color: $c-red
+.silder-person-item__text
+	font-size: 24px
+
+.experience__text
+	margin-top: 40px
+	@extend %f-mp-b
+	font-size: 40px
+	line-height: 45px
+	text-align: center
+.experience__btn
+	margin-top: 20px
+// END EXPERIENCE 
+
+
+// BEGIN FORMAT 
+.format
+	padding: 40px 0 50px
+	background-color: #f2f2f3
+	.h2
+		text-align: left
+.row-t
+	display: table
+	width: 100%
+.points
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	height: 100%
+	width: 100%
+.points-col
+	float: left
+	width: 50%
+	position: absolute
+	top: 0
+	bottom: 0
+	box-sizing: border-box
+	&:first-child
+		border-right: 1px solid #f2f2f3
+.points-col_red
+	background-color: #eddadc
+.points-col_gray
+	left: 50%
+	background-color: #e1e1e2
+.points__icon
+	position: absolute
+	top: 50%
+	left: 50%
+	+transform(translateX(-50%) translateY(-50%))
+.col-8-f
+	display: table-cell
+	width: 70%
+	padding: 5px 0
+	box-sizing: border-box
+.col-4-f
+	display: table-cell
+	width: 30%
+	box-sizing: border-box
+	vertical-align: bottom
+	overflow: hidden
+	position: relative
+.col-2-f
+	display: table-cell
+	width: 50%
+	text-align: center
+	position: relative
+	&:first-child
+		border-right: 1px solid #f2f2f3
+
+.row_bb
+	border-bottom: 5px solid #fff
+
+.format-head
+	height: 140px
+	padding-top: 30px
+	box-sizing: border-box
+.format-head_red
+	background-color: $c-red
+.format-head_gray
+	background-color: #474747
+.format-head__text
+	font-size: 28px
+	color: #fff
+	text-transform: uppercase
+.format__text
+	font-size: 28px
+// END FORMAT 
+
+
+
+// BEGIN PROGRAM 
+.program
+	padding: 20px 0 60px
+	.row
+		margin-top: 35px
+
+.program-nav__item
+	display: block
+	width: 200px
+	height: 74px
+	background-color: #b7b7bc
+	color: #fff
+	font-size: 28px
+	line-height: 70px
+	border-top: 2px solid #fff
+	border-left: 2px solid #fff
+	border-bottom: 2px solid #fff
+	padding: 0 25px 0 40px
+	position: relative
+	box-sizing: border-box
+	cursor: pointer
+	text-transform: uppercase
+	&:after
+		content: ''
+		background-image: url(img/btnc-right.png)
+		background-repeat: no-repeat
+		+size(15px 74px)
+		position: absolute
+		top: -2px
+		left: 100%
+	&.active,
+	&:hover
+		height: 73px
+		background-color: $c-red
+		&:after
+			background-image: url(img/btn-right.png)
+			background-repeat: no-repeat
+
+.occupation
+	display: none
+	&.active
+		display: block
+
+.occupation__number
+	font-size: 40px
+.occupation__title
+	font-size: 48px
+	@extend %f-mp-b
+.occupation__img
+	margin-top: 10px
+.occupation__result
+	margin-top: 30px
+	@extend %f-got-b
+	font-size: 32px
+	text-transform: uppercase
+	color: $c-red
+.occupation__list
+	list-style-image: url(img/point.png)
+
+.occupation__item
+	padding: 10px 0 10px 15px 
+	font-size: 28px
+
+.program__subtitle
+	margin-top: 60px
+	@extend %f-got-b
+	font-size: 44px
+	color: $c-red
+	text-transform: uppercase
+	text-align: center
+.program__description
+	margin-top: 20px
+	@extend %f-mp-b
+	font-size: 40px
+	line-height: 48px
+	text-align: center
+
+// END PROGRAM 
+
+
+// BEGIN STUDENT 
+.student
+	padding: 50px 0 70px
+.silder-student-item__text
+	@extend %f-got
+	font-size: 24px
+.student__btn-wrap
+	margin-top: 50px
+.student__btn
+	line-height: 1.1
+	padding: 7px 45px 0 60px
+.student__text
+	margin-top: 10px
+	@extend %f-got
+	font-size: 24px
+	text-align: center
+// END STUDENT 
+
+
+// BEGIN MAP 
+.map
+	background-color: #225525
+	height: 655px
+// END MAP 
+
+
+// BEGIN QUESTION 
+.question
+	padding: 35px 0 40px
+.question__text
+	text-align: center
+	@extend %f-got
+	font-size: 30px
+.question__link
+	color: #4b4b4b
+// END QUESTION 
+
+
+// BEGIN FOOTER 
+.footer
+	background-color: $c-red
+.logo-footer
+	margin-left: 45px
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		bottom: 20px
+		left: 108px
+		z-index: 1
+		+size(0)
+		border-left: 50px solid transparent
+		border-right: 50px solid transparent
+		border-bottom: 100px solid $c-red
+.logo-footer__link
+	display: block
+	position: relative
+	z-index: 2
+.footer__text
+	padding-top: 30px
+	font-size: 34px
+	color: #fff
+	text-align: right
+// END FOOTER 
 
 
 //ALWAYS END
