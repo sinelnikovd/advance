@@ -1,0 +1,420 @@
+extends ./template/template.jade
+
+block title
+	title Главная страница
+
+block content
+	// BEGIN HEADER 
+	.header
+		// BEGIN TOP-LINE 
+		.top-line
+			.container
+				.logo
+					a(href="/").logo__link
+						img(src="img/logo.png", alt="").logo__img
+		// END TOP-LINE 
+
+		// BEGIN TOP-SLIDER 
+		.top-slider
+			.top-slide
+				.container
+					h1.top-slide__title <span class="bold">Успех</span>, который ты строишь сам
+					p.top-slide__text Программа развития ключевых бизнес компетенций, коммуникативных и управленческих навыков от Собственников и Топ Менежеров
+			.top-slide
+				.container
+					h1.top-slide__title <span class="bold">Успех</span>, который ты строишь сам
+					p.top-slide__text Программа развития ключевых бизнес компетенций, коммуникативных и управленческих навыков от Собственников и Топ Менежеров
+			.top-slide
+				.container
+					h1.top-slide__title <span class="bold">Успех</span>, который ты строишь сам
+					p.top-slide__text Программа развития ключевых бизнес компетенций, коммуникативных и управленческих навыков от Собственников и Топ Менежеров
+		// END TOP-SLIDER 
+
+		// BEGIN HEADER__MORE 
+		.header__more
+			.container
+				.row
+					.col-4.col-4-m
+						a(href="javascript:;").btn.btn-red Узнать больше
+					.col-4
+						p.start-group Ближайший старт группы 28.05.2016 в Одессе
+		// END HEADER__MORE 
+	// END HEADER 
+
+	// BEGIN WHATFOR 
+	.whatfor
+		.container
+			h2.h2 <span class="bold">ЗАЧЕМ</span> Вам ADVANCE?
+			ul.whatfor__list
+				li.whatfor__item
+					i.icon.icon_point
+					| Понять куда идти - сформировать понимание своего будущего  
+				li.whatfor__item
+					i.icon.icon_point
+					| Получи порцию уверенности в своих силах и мотивации  
+				li.whatfor__item
+					i.icon.icon_point
+					| Сформировать прорывной круг общения и профессиональных связей  
+				li.whatfor__item
+					i.icon.icon_point
+					| Получи поддержку Топ-менеджеров и Собственников для карьерного успеха 
+				li.whatfor__item
+					i.icon.icon_point
+					| Сформируй портфель необходимых навыков для успешной карьеры в любой бизнесе  
+				li.whatfor__item
+					i.icon.icon_point
+					| Получи советы и рекомендации наставниковi
+	// END WHATFOR 
+
+	// BEGIN CAPABILITIES 
+	.capabilities
+		.container
+			h2.h2 ПРОГРАММА ОТКРЫВАЕТ <span class="bold">ВОЗМОЖНОСТИ</span>
+			.row
+				.col-4
+					.capabilities__item
+						i.icon.icon_ca1
+						p.capabilities__text Добавить в окружение людей нового уровня. Получить поддержку, мотивацию и пример 
+				.col-4
+					.capabilities__item
+						i.icon.icon_ca1
+						p.capabilities__text Думать по другому Делать по другому Получать новые результаты
+				.col-4
+					.capabilities__item
+						i.icon.icon_ca1
+						p.capabilities__text Сэкономите годы работы «в безвестности» за счет возможности личного контакта с ТОП-менеджерами.
+				.col-4
+					.capabilities__item
+						i.icon.icon_ca1
+						p.capabilities__text Сформируйте понимание своего будущего и поймите, чем хотите заниматься
+				.col-4
+					.capabilities__item
+						i.icon.icon_ca1
+						p.capabilities__text Пролучите личные контакты, связи и рекомендации тренеров, гостевых спикеров и выпускников Advance
+				.col-4
+					.capabilities__item
+						i.icon.icon_ca1
+						p.capabilities__text Выработаете конкретные навыки, которые помогут в жизни и работе каждого. Неважно, вы — юрист, студент или рэпер
+
+			// BEGIN RECALL 
+			.recall
+				.row
+					.col-4
+						img(src="img/recall.png", alt="").recall__img
+					.col-8
+						p.recall__text Я бы сравнил программу Advance с порталом, который открывается на 3 месяца​ и для​ участник​ов​ программы становятся доступны люди и возможности, обычно недостижимые для молодых людей. Сумейте ими воспользоваться! »
+						p.recall__name Вадим Орлов
+						p.recall__position Director of The National Distribution and Logistics Department в «Red Head Family Corporation» (сеть детских супермаркетов «Антошка», »Мега-Антошка», «Казка Нова», »Даниель»)
+			// END RECALL 
+	// END CAPABILITIES 
+
+	// BEGIN SIGNUP 
+	.signup
+		.container
+			h2.h2 <span class="bold">ЗАпишитесь</span> на встречу
+			p.signup__text Задачи у всех разные, только вы знаете какие волнуют Вас   
+			p.signup__text Мы знаем какие из них может решить наша программа  
+			p.signup__text.signup__text_bold Предлагаем встречу — и мы совместим то, что важно для вас с тем, что умеем мы для вашего лучшего будущего.
+			form(action="/").signup-form
+				p.signup-form__text Записаться на ознакомительную встречу с тренером
+				.signup-form__line
+					.signup-form__control
+						input(type="text" placeholder="Введите ваше имя").input
+					.signup-form__control
+						input(type="text" placeholder="Введите ваше имя").input
+					.signup-form__control
+						button(type="submit").btn.btn_red Записаться
+	// END SIGNUP 
+
+	// BEGIN EXPERIENCE 
+	.experience
+		.container
+			h2.h2 Только <span class="bold">Практический</span> опыт
+			p.description Курс вобрал в себя опыт людей, которые руководят, создают и развивают компании в Украине и зарубежом
+			// BEGIN SILDER-PERSON 
+			.silder-person
+				.silder-person-item
+					img(src="img/person1.jpg", alt="").silder-person-item__img
+					h3.silder-person-item__name Юлия Лящук 
+					p.silder-person-item__text директор Advance Business School. Более 10 лет опыта управленческой работы. С 2005 по 2010 г. — директор регионального представительства европейской бизнес-школы IBR (Institute of International Business Relations), Германия.
+				.silder-person-item
+					img(src="img/person2.jpg", alt="").silder-person-item__img
+					h3.silder-person-item__name Николай Латушкин
+					p.silder-person-item__text учредитель Advance Business School, более 12 лет опыта работы на ТОП-позициях в ведущих украинских и международных компаниях. Имеет степень МВА, Steinbeis University, Germany. Директор представительств kmbs в регионах. 
+				.silder-person-item
+					img(src="img/person3.jpg", alt="").silder-person-item__img
+					h3.silder-person-item__name Виктория Черник
+					p.silder-person-item__text директор по развитию и управлению персоналом, бизнес-коуч инвестиционной компании «Vertex United» (активы отельного бизнеса: «Бристоль», «Лондонская», «Президент-Отель». Медиа-активы: Журнал «Фокус», «Фокус. Красивая страна», сайт focus.ua). 
+				.silder-person-item
+					img(src="img/person2.jpg", alt="").silder-person-item__img
+					h3.silder-person-item__name Николай Латушкин
+					p.silder-person-item__text учредитель Advance Business School, более 12 лет опыта работы на ТОП-позициях в ведущих украинских и международных компаниях. Имеет степень МВА, Steinbeis University, Germany. Директор представительств kmbs в регионах. 
+				.silder-person-item
+					img(src="img/person3.jpg", alt="").silder-person-item__img
+					h3.silder-person-item__name Виктория Черник
+					p.silder-person-item__text директор по развитию и управлению персоналом, бизнес-коуч инвестиционной компании «Vertex United» (активы отельного бизнеса: «Бристоль», «Лондонская», «Президент-Отель». Медиа-активы: Журнал «Фокус», «Фокус. Красивая страна», сайт focus.ua). 
+			// END SILDER-PERSON 
+
+			p.experience__text Наши наставники проводят всего пару тренингов в год, так как либо практикуешь, либо только тренируешь
+			a(href="javascript:;").btn.btn_red Записаться на встречу
+	// END EXPERIENCE 
+
+	// BEGIN FORMAT 
+	.format
+		.container
+			.row
+				.col-8-f
+					h2.h2 <span class="bold">Форматы</span> обучения и <span class="bold">опции</span> программ
+				.col-4-f
+					.row
+						.col-2-f
+							.format-head
+								p.format-head__text Advance talent
+						.col-2-f
+							.format-head
+								p.format-head__text Advance professional
+			.row
+				.col-8-f
+					p.format__text Персональная визия в карьере
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Персональная визия во всех сферах жизни
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Проработка персональных Принципов и Ценностей
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Личная стратегия, призвание и миссия
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Навыки целеполагания и тайм-менеджмента
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Базовый курс по ключевым компетенциям. Введение в бизнес
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Набор ключевых бизнес-компетенций, управленческие и коммуникативные навыки
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Тестирование
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Развивающий круг общения
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Практика в компании
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Персональный, карьерный и личностный коучинг
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Наставничество топ-менеджеров
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Мотивация к действию
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Банк Талантов ведущих компаний
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+			.row
+				.col-8-f
+					p.format__text Связи и Рекомендации. Персональная поддержка топ-менеджеров
+				.col-4-f
+					.row
+						.col-2-f
+							i.icon.icon_point
+						.col-2-f
+							i.icon.icon_point
+
+	// END FORMAT 
+
+
+	// BEGIN PROGRAM 
+	.program
+		.container
+			h2.h2 <span class="bold">Программа</span> курса
+			p.description Содержание курса: 13 ключевых бизнес компетенций 14 практических занятий
+			.row
+				.col-3
+					ul.program-nav
+						li.program-nav__item Занятие 1
+						li.program-nav__item Занятие 2
+						li.program-nav__item Занятие 3
+						li.program-nav__item Занятие 4
+						li.program-nav__item Занятие 5
+				.col-9
+					.occupation
+						p.occupation__number 3-е занятие
+						h3.occupation__title Создание личного виденья и стратегии
+						img(src="img/occupation.jpg", alt="").occupation__img
+						h4.occupation__result В результате занятия: 
+						ul.occupation__list
+							li.occupation__item Создадите амбициозное и вдохновляющее видение своей жизни
+							li.occupation__item Проясните свои жизненные ценности и миссию
+							li.occupation__item Создадите колесо жизненного баланса
+							li.occupation__item Расставите жизненные приоритеты
+							li.occupation__item Определите зоны повышенного внимания на ближайший год
+			h3.program__subtitle Вы учитесь на практике и у практиков
+			p.program__description Вместо того, что бы отрабатывать свой опыт годами, Вы получаете концентрированный опыт и наставников
+	// END PROGRAM 
+
+
+	// BEGIN SIGNUP 
+	.signup
+		.container
+			h2.h2 <span class="bold">ЗАпишитесь</span> на встречу
+			p.signup__text Задачи у всех разные, только вы знаете какие волнуют Вас   
+			p.signup__text Мы знаем какие из них может решить наша программа  
+			p.signup__text.signup__text_bold Предлагаем встречу — и мы совместим то, что важно для вас с тем, что умеем мы для вашего лучшего будущего.
+			form(action="/").signup-form
+				p.signup-form__text Записаться на ознакомительную встречу с тренером
+				.signup-form__line
+					.signup-form__control
+						input(type="text" placeholder="Введите ваше имя").input
+					.signup-form__control
+						input(type="text" placeholder="Введите ваше имя").input
+					.signup-form__control
+						button(type="submit").btn.btn_red Записаться
+	// END SIGNUP 
+
+
+	// BEGIN STUDENT 
+	.student
+		.container
+			h2.h2 Мы <span class="bold">улучшаем</span> страну <br>и делаем это через своих <span class="bold">студентоВ</span>
+			p.description Получите доступ к полезным деловым контактам выпускников и тренеров в Advance Alumni Club
+			// BEGIN SILDER-PERSON 
+			.silder-person
+				.silder-person-item
+					img(src="img/person1.jpg", alt="").silder-person-item__img
+					h3.silder-person-item__name Юлия Лящук 
+					p.silder-person-item__text директор Advance Business School. Более 10 лет опыта управленческой работы. С 2005 по 2010 г. — директор регионального представительства европейской бизнес-школы IBR (Institute of International Business Relations), Германия.
+				.silder-person-item
+					img(src="img/person2.jpg", alt="").silder-person-item__img
+					h3.silder-person-item__name Николай Латушкин
+					p.silder-person-item__text учредитель Advance Business School, более 12 лет опыта работы на ТОП-позициях в ведущих украинских и международных компаниях. Имеет степень МВА, Steinbeis University, Germany. Директор представительств kmbs в регионах. 
+				.silder-person-item
+					img(src="img/person3.jpg", alt="").silder-person-item__img
+					h3.silder-person-item__name Виктория Черник
+					p.silder-person-item__text директор по развитию и управлению персоналом, бизнес-коуч инвестиционной компании «Vertex United» (активы отельного бизнеса: «Бристоль», «Лондонская», «Президент-Отель». Медиа-активы: Журнал «Фокус», «Фокус. Красивая страна», сайт focus.ua). 
+				.silder-person-item
+					img(src="img/person2.jpg", alt="").silder-person-item__img
+					h3.silder-person-item__name Николай Латушкин
+					p.silder-person-item__text учредитель Advance Business School, более 12 лет опыта работы на ТОП-позициях в ведущих украинских и международных компаниях. Имеет степень МВА, Steinbeis University, Germany. Директор представительств kmbs в регионах. 
+				.silder-person-item
+					img(src="img/person3.jpg", alt="").silder-person-item__img
+					h3.silder-person-item__name Виктория Черник
+					p.silder-person-item__text директор по развитию и управлению персоналом, бизнес-коуч инвестиционной компании «Vertex United» (активы отельного бизнеса: «Бристоль», «Лондонская», «Президент-Отель». Медиа-активы: Журнал «Фокус», «Фокус. Красивая страна», сайт focus.ua). 
+			// END SILDER-PERSON 
+
+			p.btn-wrapper
+				a(href="javascript:;").btn.btn_red.student__btn Получить контакт <br>выпускника
+			p.student__text Вы можете получить у нас их контакты чтобы связаться и узнать лично отзыв об обучении в Advance
+	// END STUDENT 
+
+	// BEGIN MAP 
+	.map#map
+	// END MAP 
+
+	// BEGIN QUESTION 
+	.question
+		.container
+			p.question__text Остались вопросы?
+				br
+				a(href="javascript:;").question__link Задайте их нам
+	// END QUESTION 
+
+	// BEGIN FOOTER 
+	.footer
+		.container
+			.row
+				.col-6
+					.logo-footer
+						a(href="/").logo-footer__link
+							img(src="img/logo.png", alt="").logo-footer__img
+				.col-6
+					p.footer__text социальный проект Advance One
+	// END FOOTER 
