@@ -34,6 +34,7 @@ $(document).ready(function() {
 		$('.occupation').eq($(this).index()).addClass('active');
 	});
 
+
 });
 
 	//SVG Fallback
